@@ -74,7 +74,7 @@ export default function PlenaryDetail() {
           <PersonnelCard personnel={plenary.personnel} />
         </div>
         <div className="lg:col-span-2 space-y-6">
-          <DocumentList documents={plenary.documents} agenda={plenary.agenda} />
+          <DocumentList documents={plenary.documents} agenda={plenary.agenda} meetingId={plenary.id} />
           <SourceList
             sources={plenary.sources}
             significance={plenary.significance}

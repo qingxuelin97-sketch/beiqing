@@ -13,6 +13,7 @@ import TimelinePage from '@/pages/Timeline';
 import Search from '@/pages/Search';
 import About from '@/pages/About';
 import Documents from '@/pages/Documents';
+import DocumentViewer from '@/pages/DocumentViewer';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ function AnimatedRoutes() {
         <Route path="/plenaries" element={<PageTransition><Plenaries /></PageTransition>} />
         <Route path="/plenaries/:id" element={<PageTransition><PlenaryDetail /></PageTransition>} />
         <Route path="/documents" element={<PageTransition><Documents /></PageTransition>} />
+        <Route path="/documents/:docId" element={<PageTransition><DocumentViewer /></PageTransition>} />
         <Route path="/timeline" element={<PageTransition><TimelinePage /></PageTransition>} />
         <Route path="/search" element={<PageTransition><Search /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />

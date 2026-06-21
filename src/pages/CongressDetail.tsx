@@ -78,7 +78,7 @@ export default function CongressDetail() {
           <PersonnelCard personnel={congress.personnel} />
         </div>
         <div className="lg:col-span-2 space-y-6">
-          <DocumentList documents={congress.documents} agenda={congress.agenda} />
+          <DocumentList documents={congress.documents} agenda={congress.agenda} meetingId={congress.id} />
           <SourceList sources={congress.sources} significance={congress.significance} />
         </div>
       </div>

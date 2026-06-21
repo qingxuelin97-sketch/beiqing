@@ -4,13 +4,13 @@ import { StatsBoard } from '@/components/home/StatsBoard';
 import { TimelinePreview } from '@/components/home/TimelinePreview';
 import { StarDivider } from '@/components/ui/StarDivider';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, FileText, Shield, Library, Sparkles } from 'lucide-react';
-import { congresses, plenaries, getAllDocuments } from '@/data';
+import { ArrowRight, BookOpen, FileText, Shield, Library, Sparkles, BookMarked } from 'lucide-react';
+import { congresses, plenaries, getDocumentStats } from '@/data';
 
 export default function Home() {
   const featuredCongress = congresses[congresses.length - 1];
   const featuredPlenary = plenaries[plenaries.length - 1];
-  const totalDocs = getAllDocuments().length;
+  const docStats = getDocumentStats();
 
   return (
     <div>
@@ -124,15 +124,21 @@ export default function Home() {
                       <span className="text-xs text-party-gold-soft tracking-widest">文件浏览</span>
                     </div>
                     <h3 className="font-serif font-bold text-2xl text-party-gold mb-3 group-hover:text-shadow-gold transition-all">
-                      浏览全部 {totalDocs} 篇会议文件
+                      浏览全部 {docStats.total} 篇会议文件
                     </h3>
                     <p className="text-sm text-party-paper/70 leading-relaxed mb-4">
-                      按文件类型（纲领 / 章程 / 决议 / 报告 / 宣言 / 公报 / 决定 / 意见）与届次筛选，每篇文件均附简短通俗解读与核心要点，便于快速理解。
+                      按文件类型（纲领 / 章程 / 决议 / 报告 / 宣言 / 公报 / 决定 / 意见）与届次筛选，每篇文件均附简短通俗解读与核心要点，其中 {docStats.withFullText} 篇可查看原始文献全文。
                     </p>
-                    <div className="flex items-center gap-2 text-sm text-party-gold">
-                      <Sparkles size={14} />
-                      一句话读懂党史重要文件
-                      <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                    <div className="flex flex-wrap items-center gap-3">
+                      <div className="flex items-center gap-1.5 text-sm text-party-gold">
+                        <Sparkles size={14} />
+                        一句话读懂党史重要文件
+                      </div>
+                      <div className="flex items-center gap-1.5 text-sm text-party-gold-soft">
+                        <BookMarked size={14} />
+                        原始文献全文可读
+                      </div>
+                      <ArrowRight size={14} className="text-party-gold group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                   <div className="hidden md:flex flex-col gap-2 text-xs">

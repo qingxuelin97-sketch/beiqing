@@ -84,3 +84,27 @@ export interface DocumentWithMeta extends PartyDocument {
   date: string;
   congressOrdinal: number;
 }
+
+/** 原始文件全文条目 */
+export interface FullTextEntry {
+  /** 与文档标题匹配的唯一标识 */
+  title: string;
+  /** 文件全文（可为完整全文或重要节选） */
+  content: string;
+  /** 是否为完整全文（true=完整全文，false=节选） */
+  isComplete: boolean;
+  /** 原始出处 */
+  source: string;
+  /** 文件通过/发表日期 */
+  date: string;
+  /** 全文段落结构（便于排版展示） */
+  sections?: FullTextSection[];
+}
+
+/** 全文段落结构 */
+export interface FullTextSection {
+  /** 段落标题（如"一、""第一章"等） */
+  heading?: string;
+  /** 段落内容（多条段落） */
+  paragraphs: string[];
+}
