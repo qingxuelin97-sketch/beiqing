@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --party-red: #C8102E;
+  --party-red-dark: #8B0000;
+  --party-red-darker: #5C0000;
+  --party-red-deepest: #3D0000;
+  --party-gold: #FFD700;
+  --party-gold-soft: #E8C26A;
+  --party-gold-deep: #B8860B;
+  --party-paper: #F5EFE0;
+  --party-ink: #1A0A0A;
+
+  font-family: "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--party-ink);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--party-red-deepest);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 0, 0, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(92, 0, 0, 0.7) 0%, transparent 50%),
+    linear-gradient(180deg, #3D0000 0%, #5C0000 100%);
+  background-attachment: fixed;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #3D0000;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C8102E, #8B0000);
+  border-radius: 5px;
+  border: 1px solid #FFD700;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFD700, #B8860B);
+}
+
+/* 选中文本 */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: #F5EFE0;
+}
+
+@layer components {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #E8C26A 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-red-gradient {
+    background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .border-gold-gradient {
+    border-image: linear-gradient(135deg, #FFD700, #B8860B) 1;
+  }
+
+  .bg-paper-card {
+    background-color: #F5EFE0;
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(184, 134, 11, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(200, 16, 46, 0.04) 0%, transparent 40%);
+  }
+
+  .party-divider {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+  }
+
+  .party-divider::before {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFD700;
+    background: #3D0000;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .gold-shimmer {
+    background: linear-gradient(
+      90deg,
+      #B8860B 0%,
+      #FFD700 25%,
+      #FFF8DC 50%,
+      #FFD700 75%,
+      #B8860B 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+  }
+  .text-shadow-red {
+    text-shadow: 0 2px 10px rgba(139, 0, 0, 0.6);
+  }
+}
+
+/* 党徽五角星 */
+.party-emblem {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  color: #FFD700;
+}
+.party-emblem::before {
+  content: "★";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* 回纹分隔 */
+.meander-border {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 8px,
+    rgba(255, 215, 0, 0.4) 8px,
+    rgba(255, 215, 0, 0.4) 10px,
+    transparent 10px,
+    transparent 18px,
+    rgba(255, 215, 0, 0.4) 18px,
+    rgba(255, 215, 0, 0.4) 20px
+  );
+  height: 4px;
+}
+
+/* 按钮涟漪 */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.4);
+  transform: scale(0);
+  animation: ripple-anim 0.6s linear;
+  pointer-events: none;
+}
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
