@@ -4,12 +4,13 @@ import { StatsBoard } from '@/components/home/StatsBoard';
 import { TimelinePreview } from '@/components/home/TimelinePreview';
 import { StarDivider } from '@/components/ui/StarDivider';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, FileText, Shield } from 'lucide-react';
-import { congresses, plenaries } from '@/data';
+import { ArrowRight, BookOpen, FileText, Shield, Library, Sparkles } from 'lucide-react';
+import { congresses, plenaries, getAllDocuments } from '@/data';
 
 export default function Home() {
   const featuredCongress = congresses[congresses.length - 1];
   const featuredPlenary = plenaries[plenaries.length - 1];
+  const totalDocs = getAllDocuments().length;
 
   return (
     <div>
@@ -87,6 +88,64 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* 文件总览入口 */}
+      <section className="relative py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <p className="text-xs text-party-gold-soft/70 tracking-[0.3em] mb-2">DOCUMENTS ARCHIVE</p>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-gold-gradient">
+              会议文件 · 通俗解读
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link to="/documents" className="group block">
+              <div className="relative overflow-hidden bg-gradient-to-br from-party-red-darker/80 to-party-red-deepest/80 backdrop-blur-sm border border-party-gold/30 rounded-lg p-8 transition-all duration-500 hover:border-party-gold/70 hover:shadow-card-hover">
+                <div className="absolute top-0 right-0 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Library size={180} className="text-party-gold" />
+                </div>
+                <div className="relative grid md:grid-cols-3 gap-6 items-center">
+                  <div className="md:col-span-2">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Library className="text-party-gold" size={22} />
+                      <span className="text-xs text-party-gold-soft tracking-widest">文件浏览</span>
+                    </div>
+                    <h3 className="font-serif font-bold text-2xl text-party-gold mb-3 group-hover:text-shadow-gold transition-all">
+                      浏览全部 {totalDocs} 篇会议文件
+                    </h3>
+                    <p className="text-sm text-party-paper/70 leading-relaxed mb-4">
+                      按文件类型（纲领 / 章程 / 决议 / 报告 / 宣言 / 公报 / 决定 / 意见）与届次筛选，每篇文件均附简短通俗解读与核心要点，便于快速理解。
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-party-gold">
+                      <Sparkles size={14} />
+                      一句话读懂党史重要文件
+                      <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                  <div className="hidden md:flex flex-col gap-2 text-xs">
+                    {['纲领', '章程', '决议', '报告', '宣言', '公报'].map((t) => (
+                      <span key={t} className="px-3 py-1.5 bg-party-gold/10 border border-party-gold/30 rounded text-party-gold-soft text-center">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </section>
 

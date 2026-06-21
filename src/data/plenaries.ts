@@ -18,6 +18,7 @@ export const plenaries: Plenary[] = [
     communique: '选举陈独秀为中央局书记，张国焘分管组织，李达分管宣传。',
     personnel: { notes: '中央局书记陈独秀。' },
     significance: '党的第一个中央领导机构正式成立。',
+    plainExplanation: '党刚成立，选出陈独秀当书记，张国焘管组织，李达管宣传，中央领导机构正式开张。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -36,6 +37,7 @@ export const plenaries: Plenary[] = [
     communique: '选举陈独秀为中央执行委员会委员长。',
     personnel: { centralCommittee: 5, notes: '委员长陈独秀。' },
     significance: '健全党的中央领导机构，推动党的工作开展。',
+    plainExplanation: '二大闭幕后选出中央领导，陈独秀当"委员长"，党的工作开始运转。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -54,6 +56,7 @@ export const plenaries: Plenary[] = [
     communique: '选举陈独秀为中央执行委员会委员长。',
     personnel: { centralCommittee: 9, notes: '委员长陈独秀。' },
     significance: '推动国共合作统一战线的建立。',
+    plainExplanation: '三大后选出中央领导，陈独秀继续当"委员长"，推动国共合作落地。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -72,6 +75,7 @@ export const plenaries: Plenary[] = [
     communique: '选举陈独秀为中央执行委员会总书记。',
     personnel: { centralCommittee: 9, notes: '总书记陈独秀。' },
     significance: '健全中央领导机构，迎接大革命高潮。',
+    plainExplanation: '四大后陈独秀改任"总书记"，迎接即将到来的大革命高潮。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -90,6 +94,7 @@ export const plenaries: Plenary[] = [
     communique: '选举陈独秀为总书记，首次设立中央政治局和政治局常委会。',
     personnel: { centralCommittee: 31, politburo: 7, notes: '总书记陈独秀。' },
     significance: '首次设立中央政治局，健全中央领导体制。',
+    plainExplanation: '五大后第一次设立"中央政治局"和"常委会"，陈独秀任总书记，中央领导体制更健全。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -108,6 +113,7 @@ export const plenaries: Plenary[] = [
     communique: '选举向忠发为中央政治局主席、政治局常委会主席。',
     personnel: { centralCommittee: 23, politburo: 5, notes: '政治局主席向忠发。' },
     significance: '健全中央领导机构，领导土地革命战争。',
+    plainExplanation: '六大后选出向忠发当政治局主席，领导土地革命战争。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
   {
@@ -120,18 +126,31 @@ export const plenaries: Plenary[] = [
     location: '延安',
     attendees: '中央委员会委员及候补委员、各中央局和八路军、新四军负责人',
     agenda: [
-      '总结抗战以来的经验',
+      '总结抗战以来经验',
       '确定党在抗战新阶段的基本方针和任务',
       '确立毛泽东在全党的领导地位',
       '通过《关于中央委员会工作规则与纪律的决定》等',
     ],
     documents: [
-      { title: '论新阶段', type: '报告', summary: '毛泽东作政治报告，提出马克思主义中国化的命题。' },
-      { title: '关于各级党部工作规则与纪律的决定', type: '决定', summary: '健全党的领导制度和纪律。' },
+      {
+        title: '论新阶段',
+        type: '报告',
+        summary: '毛泽东作政治报告，提出马克思主义中国化的命题。',
+        plainExplanation: '毛泽东作报告，第一次提出"马克思主义中国化"——把马克思主义和中国实际结合起来。',
+        keyPoints: ['提出"马克思主义中国化"', '确立毛泽东领导地位', '总结抗战经验'],
+      },
+      {
+        title: '关于各级党部工作规则与纪律的决定',
+        type: '决定',
+        summary: '健全党的领导制度和纪律。',
+        plainExplanation: '给各级党组织定"工作规则和纪律"，让党更团结更有战斗力。',
+        keyPoints: ['健全领导制度', '严明党的纪律'],
+      },
     ],
     communique: '首次提出马克思主义中国化的命题，确立毛泽东在全党的领导地位。',
     personnel: { notes: '巩固了毛泽东在全党的领导地位。' },
     significance: '首次提出"马克思主义中国化"命题，确立毛泽东在全党的领导地位，统一了全党的步调，为实现党对抗日战争的领导奠定了基础。',
+    plainExplanation: '第一次提出"马克思主义中国化"，确立毛泽东的领导地位，统一全党步调领导抗战。',
     sources: [
       { title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' },
       { title: '毛泽东选集（第二卷）', publisher: '人民出版社', year: '1991' },
@@ -153,6 +172,7 @@ export const plenaries: Plenary[] = [
     communique: '选举毛泽东为中央委员会主席、中央政治局主席、中央书记处主席。',
     personnel: { centralCommittee: 44, politburo: 13, standingCommittee: 5, chairman: '毛泽东' },
     significance: '选举产生以毛泽东为核心的中央领导集体，为夺取抗战胜利和解放战争胜利提供组织保证。',
+    plainExplanation: '七大后选举毛泽东任中央委员会主席，形成以毛泽东为核心的中央领导集体。',
     sources: [{ title: '中国共产党历史（第一卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
   {
@@ -171,11 +191,18 @@ export const plenaries: Plenary[] = [
       '提出"两个务必"',
     ],
     documents: [
-      { title: '在中国共产党第七届中央委员会第二次全体会议上的报告', type: '报告', summary: '毛泽东作报告，提出党的工作重心由乡村转移到城市，提出"两个务必"。' },
+      {
+        title: '在中国共产党第七届中央委员会第二次全体会议上的报告',
+        type: '报告',
+        summary: '毛泽东作报告，提出党的工作重心由乡村转移到城市，提出"两个务必"。',
+        plainExplanation: '毛泽东作报告，说革命快胜利了，党的工作重心要从农村转到城市，并告诫全党"务必保持谦虚谨慎、务必保持艰苦奋斗"。',
+        keyPoints: ['工作重心由乡村转向城市', '提出"两个务必"', '规定胜利后基本政策'],
+      },
     ],
     communique: '提出党的工作重心由乡村转移到城市，提出"两个务必"重要思想。',
     personnel: { notes: '毛泽东提出"两个务必"。' },
     significance: '在革命胜利前夕召开，为夺取全国胜利和建设新中国作了政治上、思想上、组织上的准备，毛泽东提出"两个务必"重要思想。',
+    plainExplanation: '革命胜利前夕在西柏坡召开，提出工作重心转向城市，并提出著名的"两个务必"。',
     sources: [
       { title: '毛泽东选集（第四卷）', publisher: '人民出版社', year: '1991' },
       { title: '中国共产党历史（第二卷）', publisher: '中央党史和文献研究院', year: '2011' },
@@ -197,6 +224,7 @@ export const plenaries: Plenary[] = [
     communique: '选举毛泽东为中央委员会主席，刘少奇、周恩来、朱德、陈云为副主席，邓小平为总书记。',
     personnel: { centralCommittee: 97, politburo: 17, standingCommittee: 5, chairman: '毛泽东' },
     significance: '选举产生新的中央领导集体，为社会主义建设提供组织保证。',
+    plainExplanation: '八大后选举毛泽东任主席，刘少奇、周恩来、朱德、陈云任副主席，邓小平任总书记。',
     sources: [{ title: '中国共产党历史（第二卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
   {
@@ -213,6 +241,7 @@ export const plenaries: Plenary[] = [
     communique: '讨论1957年国民经济计划，分析国际形势。',
     personnel: {},
     significance: '讨论国民经济计划和国际形势，对社会主义建设作出部署。',
+    plainExplanation: '讨论1957年经济计划，并分析波匈事件后的国际形势。',
     sources: [{ title: '中国共产党历史（第二卷）', publisher: '中央党史和文献研究院', year: '2011' }],
   },
 
@@ -233,11 +262,18 @@ export const plenaries: Plenary[] = [
       '形成以邓小平为核心的党的第二代中央领导集体',
     ],
     documents: [
-      { title: '中国共产党第十一届中央委员会第三次全体会议公报', type: '公报', summary: '作出把全党工作着重点转移到社会主义现代化建设上来的决策。' },
+      {
+        title: '中国共产党第十一届中央委员会第三次全体会议公报',
+        type: '公报',
+        summary: '作出把全党工作着重点转移到社会主义现代化建设上来的决策。',
+        plainExplanation: '公报宣布：党的工作重点从"阶级斗争"转到"经济建设"上来，开启改革开放。',
+        keyPoints: ['工作重点转移到经济建设', '实行改革开放', '重新确立思想路线'],
+      },
     ],
     communique: '作出把全党工作着重点转移到社会主义现代化建设上来和实行改革开放的历史性决策。',
     personnel: { notes: '增选陈云为中央政治局委员、政治局常委、中央委员会副主席。' },
     significance: '新中国成立以来党的历史上具有深远意义的伟大转折，开启了改革开放和社会主义现代化建设新时期，形成以邓小平为核心的党的第二代中央领导集体。',
+    plainExplanation: '新中国成立以来党的伟大转折：工作重点转到经济建设，实行改革开放，开启新时期。',
     sources: [
       { title: '中国共产党历史（第二卷）', publisher: '中央党史和文献研究院', year: '2011' },
       { title: '人民日报', publisher: '人民日报社', year: '1978' },
@@ -259,11 +295,18 @@ export const plenaries: Plenary[] = [
       '选举胡耀邦为中央委员会主席，邓小平为中央军委主席',
     ],
     documents: [
-      { title: '关于建国以来党的若干历史问题的决议', type: '决议', summary: '对建国32年来党的重大历史事件作出科学总结，正确评价毛泽东的历史地位，确立毛泽东思想作为党的指导思想的地位。' },
+      {
+        title: '关于建国以来党的若干历史问题的决议',
+        type: '决议',
+        summary: '对建国32年来党的重大历史事件作出科学总结，正确评价毛泽东的历史地位，确立毛泽东思想作为党的指导思想的地位。',
+        plainExplanation: '党的第二个历史决议：科学总结建国32年历史，正确评价毛泽东和毛泽东思想，统一全党思想。',
+        keyPoints: ['科学总结建国以来历史', '正确评价毛泽东', '确立毛泽东思想指导地位'],
+      },
     ],
     communique: '通过《关于建国以来党的若干历史问题的决议》，选举胡耀邦为中央委员会主席，邓小平为中央军委主席。',
     personnel: { chairman: '胡耀邦', notes: '胡耀邦任中央委员会主席，邓小平任中央军委主席。' },
     significance: '通过《关于建国以来党的若干历史问题的决议》，标志着党在指导思想上拨乱反正任务的完成，统一了全党思想。',
+    plainExplanation: '通过党的第二个历史决议，完成指导思想上的拨乱反正，统一全党思想。',
     sources: [
       { title: '关于建国以来党的若干历史问题的决议', publisher: '人民出版社', year: '1981' },
       { title: '中国共产党历史（第二卷）', publisher: '中央党史和文献研究院', year: '2011' },
@@ -282,11 +325,18 @@ export const plenaries: Plenary[] = [
     attendees: '中央委员会委员及候补委员',
     agenda: ['通过《关于经济体制改革的决定》'],
     documents: [
-      { title: '关于经济体制改革的决定', type: '决定', summary: '阐述经济体制改革的方向、性质、任务和基本政策，是指导中国经济体制改革的纲领性文件。' },
+      {
+        title: '关于经济体制改革的决定',
+        type: '决定',
+        summary: '阐述经济体制改革的方向、性质、任务和基本政策，是指导中国经济体制改革的纲领性文件。',
+        plainExplanation: '决定把改革从农村推向城市，明确经济体制改革的方向和任务，是改革纲领性文件。',
+        keyPoints: ['改革从农村推向城市', '明确改革方向任务', '是改革纲领性文件'],
+      },
     ],
     communique: '通过《关于经济体制改革的决定》，推动以城市为重点的经济体制改革。',
     personnel: {},
     significance: '通过《关于经济体制改革的决定》，推动以城市为重点的整个经济体制改革，是经济体制改革的重要里程碑。',
+    plainExplanation: '通过经济体制改革决定，把改革从农村推向城市，是改革的重要里程碑。',
     sources: [
       { title: '中国共产党历史（第三卷）', publisher: '中央党史和文献研究院', year: '2019' },
       { title: '人民日报', publisher: '人民日报社', year: '1984' },
@@ -309,11 +359,18 @@ export const plenaries: Plenary[] = [
       '选举江泽民为中央委员会总书记',
     ],
     documents: [
-      { title: '关于赵紫阳同志在反党反社会主义的动乱中所犯错误的报告', type: '报告', summary: '审议通过相关报告。' },
+      {
+        title: '关于赵紫阳同志在反党反社会主义的动乱中所犯错误的报告',
+        type: '报告',
+        summary: '审议通过相关报告。',
+        plainExplanation: '审议通过相关报告，调整中央领导机构。',
+        keyPoints: ['审议通过相关报告', '调整中央领导'],
+      },
     ],
     communique: '选举江泽民为中央委员会总书记，形成以江泽民为核心的党的第三代中央领导集体。',
     personnel: { generalSecretary: '江泽民', notes: '江泽民任中央委员会总书记。' },
     significance: '形成以江泽民为核心的党的第三代中央领导集体，对稳定局势、推进改革开放和社会主义现代化建设起到决定性作用。',
+    plainExplanation: '选举江泽民任总书记，形成党的第三代中央领导集体，稳定局势推进改革。',
     sources: [
       { title: '中国共产党历史（第三卷）', publisher: '中央党史和文献研究院', year: '2019' },
       { title: '人民日报', publisher: '人民日报社', year: '1989' },
@@ -335,6 +392,7 @@ export const plenaries: Plenary[] = [
     communique: '选举江泽民为中央委员会总书记。',
     personnel: { centralCommittee: 189, politburo: 20, standingCommittee: 7, generalSecretary: '江泽民' },
     significance: '选举产生以江泽民为核心的中央领导集体。',
+    plainExplanation: '十四大后选举江泽民任总书记，形成新一届中央领导集体。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '1992' }],
   },
 
@@ -353,6 +411,7 @@ export const plenaries: Plenary[] = [
     communique: '选举江泽民为中央委员会总书记。',
     personnel: { centralCommittee: 193, politburo: 22, standingCommittee: 7, generalSecretary: '江泽民' },
     significance: '选举产生新一届中央领导集体。',
+    plainExplanation: '十五大后选举江泽民连任总书记，形成新一届中央领导集体。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '1997' }],
   },
 
@@ -371,6 +430,7 @@ export const plenaries: Plenary[] = [
     communique: '选举胡锦涛为中央委员会总书记。',
     personnel: { centralCommittee: 198, politburo: 24, standingCommittee: 9, generalSecretary: '胡锦涛' },
     significance: '选举产生以胡锦涛为总书记的新一届中央领导集体，实现中央领导集体的顺利交接。',
+    plainExplanation: '十六大后选举胡锦涛任总书记，实现中央领导集体顺利交接。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2002' }],
   },
 
@@ -389,6 +449,7 @@ export const plenaries: Plenary[] = [
     communique: '选举胡锦涛为中央委员会总书记。',
     personnel: { centralCommittee: 204, politburo: 25, standingCommittee: 9, generalSecretary: '胡锦涛' },
     significance: '选举产生新一届中央领导集体。',
+    plainExplanation: '十七大后选举胡锦涛连任总书记，形成新一届中央领导集体。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2007' }],
   },
 
@@ -407,6 +468,7 @@ export const plenaries: Plenary[] = [
     communique: '选举习近平为中央委员会总书记。',
     personnel: { centralCommittee: 205, politburo: 25, standingCommittee: 7, generalSecretary: '习近平' },
     significance: '选举产生以习近平同志为核心的新一届中央领导集体。',
+    plainExplanation: '十八大后选举习近平任总书记，形成以习近平同志为核心的新一届中央领导集体。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2012' }],
   },
   {
@@ -423,11 +485,18 @@ export const plenaries: Plenary[] = [
       '通过《关于全面深化改革若干重大问题的决定》',
     ],
     documents: [
-      { title: '关于全面深化改革若干重大问题的决定', type: '决定', summary: '提出全面深化改革的总目标：完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。' },
+      {
+        title: '关于全面深化改革若干重大问题的决定',
+        type: '决定',
+        summary: '提出全面深化改革的总目标：完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。',
+        plainExplanation: '提出全面深化改革总目标：完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。',
+        keyPoints: ['提出全面深化改革总目标', '推进国家治理现代化', '部署15个领域改革'],
+      },
     ],
     communique: '通过《关于全面深化改革若干重大问题的决定》，提出全面深化改革的总目标。',
     personnel: {},
     significance: '提出全面深化改革的总目标——完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化，是新时代改革开放的纲领性文件。',
+    plainExplanation: '提出全面深化改革总目标——完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2013' },
       { title: '中共中央关于全面深化改革若干重大问题的决定', publisher: '人民出版社', year: '2013' },
@@ -447,11 +516,18 @@ export const plenaries: Plenary[] = [
       '通过《关于全面推进依法治国若干重大问题的决定》',
     ],
     documents: [
-      { title: '关于全面推进依法治国若干重大问题的决定', type: '决定', summary: '提出全面推进依法治国的总目标：建设中国特色社会主义法治体系，建设社会主义法治国家。' },
+      {
+        title: '关于全面推进依法治国若干重大问题的决定',
+        type: '决定',
+        summary: '提出全面推进依法治国的总目标：建设中国特色社会主义法治体系，建设社会主义法治国家。',
+        plainExplanation: '党的历史上第一次以全会形式专题研究依法治国，提出建设中国特色社会主义法治体系、建设社会主义法治国家。',
+        keyPoints: ['首次以全会形式研究依法治国', '建设中国特色社会主义法治体系', '建设社会主义法治国家'],
+      },
     ],
     communique: '通过《关于全面推进依法治国若干重大问题的决定》，首次以全会形式专题研究依法治国。',
     personnel: {},
     significance: '党的历史上第一次以全会形式专题研究依法治国，提出建设中国特色社会主义法治体系、建设社会主义法治国家的总目标。',
+    plainExplanation: '党的历史上第一次以全会形式专题研究依法治国，提出建设中国特色社会主义法治体系。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2014' },
       { title: '中共中央关于全面推进依法治国若干重大问题的决定', publisher: '人民出版社', year: '2014' },
@@ -472,12 +548,25 @@ export const plenaries: Plenary[] = [
       '明确习近平总书记为党中央的核心、全党的核心',
     ],
     documents: [
-      { title: '关于新形势下党内政治生活的若干准则', type: '决定', summary: '对加强和规范党内政治生活作出规定。' },
-      { title: '中国共产党党内监督条例', type: '决定', summary: '对党内监督作出规定。' },
+      {
+        title: '关于新形势下党内政治生活的若干准则',
+        type: '决定',
+        summary: '对加强和规范党内政治生活作出规定。',
+        plainExplanation: '对党内政治生活立规矩，让党内政治生活更加严肃规范。',
+        keyPoints: ['规范党内政治生活', '加强党内监督'],
+      },
+      {
+        title: '中国共产党党内监督条例',
+        type: '决定',
+        summary: '对党内监督作出规定。',
+        plainExplanation: '明确党内监督的内容和方式，让权力在监督下运行。',
+        keyPoints: ['明确党内监督', '权力在监督下运行'],
+      },
     ],
     communique: '明确习近平总书记为党中央的核心、全党的核心，通过《关于新形势下党内政治生活的若干准则》和《中国共产党党内监督条例》。',
     personnel: { notes: '明确习近平总书记为党中央的核心、全党的核心。' },
     significance: '明确习近平总书记为党中央的核心、全党的核心，对全面从严治党作出系统部署。',
+    plainExplanation: '明确习近平总书记为党中央的核心、全党的核心，对全面从严治党作出系统部署。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2016' },
       { title: '关于新形势下党内政治生活的若干准则', publisher: '人民出版社', year: '2016' },
@@ -499,6 +588,7 @@ export const plenaries: Plenary[] = [
     communique: '选举习近平为中央委员会总书记。',
     personnel: { centralCommittee: 204, politburo: 25, standingCommittee: 7, generalSecretary: '习近平' },
     significance: '选举产生以习近平同志为核心的新一届中央领导集体。',
+    plainExplanation: '十九大后选举习近平任总书记，形成新一届中央领导集体。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2017' }],
   },
   {
@@ -514,11 +604,18 @@ export const plenaries: Plenary[] = [
       '审议通过《中共中央关于修改宪法部分内容的建议》',
     ],
     documents: [
-      { title: '中共中央关于修改宪法部分内容的建议', type: '意见', summary: '建议修改宪法部分内容，包括设立国家监察委员会等。' },
+      {
+        title: '中共中央关于修改宪法部分内容的建议',
+        type: '意见',
+        summary: '建议修改宪法部分内容，包括设立国家监察委员会等。',
+        plainExplanation: '建议修改宪法，包括设立国家监察委员会等重大内容。',
+        keyPoints: ['建议修改宪法', '设立国家监察委员会'],
+      },
     ],
     communique: '审议通过《中共中央关于修改宪法部分内容的建议》。',
     personnel: {},
     significance: '审议通过修改宪法部分内容的建议，推动宪法与时俱进完善发展。',
+    plainExplanation: '审议通过修改宪法建议，推动宪法与时俱进完善发展。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2018' }],
   },
   {
@@ -534,12 +631,25 @@ export const plenaries: Plenary[] = [
       '审议通过《关于深化党和国家机构改革的决定》和《深化党和国家机构改革方案》',
     ],
     documents: [
-      { title: '关于深化党和国家机构改革的决定', type: '决定', summary: '对深化党和国家机构改革作出部署。' },
-      { title: '深化党和国家机构改革方案', type: '决定', summary: '具体改革方案。' },
+      {
+        title: '关于深化党和国家机构改革的决定',
+        type: '决定',
+        summary: '对深化党和国家机构改革作出部署。',
+        plainExplanation: '决定对党和国家机构进行系统性、整体性、重构性改革。',
+        keyPoints: ['深化机构改革', '系统性整体性重构'],
+      },
+      {
+        title: '深化党和国家机构改革方案',
+        type: '决定',
+        summary: '具体改革方案。',
+        plainExplanation: '机构改革的具体方案，明确改什么、怎么改。',
+        keyPoints: ['具体改革方案', '明确改革路径'],
+      },
     ],
     communique: '通过《关于深化党和国家机构改革的决定》和《深化党和国家机构改革方案》。',
     personnel: {},
     significance: '对深化党和国家机构改革作出全面部署，是推进国家治理体系和治理能力现代化的重要举措。',
+    plainExplanation: '对深化党和国家机构改革作出全面部署，推进国家治理体系和治理能力现代化。',
     sources: [{ title: '人民日报', publisher: '人民日报社', year: '2018' }],
   },
   {
@@ -556,11 +666,18 @@ export const plenaries: Plenary[] = [
       '通过《关于坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化若干重大问题的决定》',
     ],
     documents: [
-      { title: '关于坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化若干重大问题的决定', type: '决定', summary: '系统总结我国国家制度和国家治理体系的显著优势，明确坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化的总体目标。' },
+      {
+        title: '关于坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化若干重大问题的决定',
+        type: '决定',
+        summary: '系统总结我国国家制度和国家治理体系的显著优势，明确坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化的总体目标。',
+        plainExplanation: '首次专门研究国家制度和国家治理问题，系统总结13个方面的制度优势，明确"三步走"总体目标。',
+        keyPoints: ['首次专门研究国家制度', '总结13方面制度优势', '明确"三步走"总体目标'],
+      },
     ],
     communique: '通过《关于坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化若干重大问题的决定》。',
     personnel: {},
     significance: '首次专门研究国家制度和国家治理问题，系统阐述中国特色社会主义制度的显著优势。',
+    plainExplanation: '首次专门研究国家制度和国家治理问题，系统阐述中国特色社会主义制度的显著优势。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2019' },
       { title: '中共中央关于坚持和完善中国特色社会主义制度、推进国家治理体系和治理能力现代化若干重大问题的决定', publisher: '人民出版社', year: '2019' },
@@ -579,11 +696,18 @@ export const plenaries: Plenary[] = [
       '审议通过《关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》',
     ],
     documents: [
-      { title: '关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议', type: '意见', summary: '提出"十四五"时期经济社会发展指导方针和主要目标，明确2035年远景目标。' },
+      {
+        title: '关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议',
+        type: '意见',
+        summary: '提出"十四五"时期经济社会发展指导方针和主要目标，明确2035年远景目标。',
+        plainExplanation: '描绘未来5年乃至15年中国发展的蓝图，提出"十四五"目标和2035年远景目标。',
+        keyPoints: ['描绘"十四五"蓝图', '明确2035年远景目标', '提出新发展格局'],
+      },
     ],
     communique: '通过《关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》。',
     personnel: {},
     significance: '描绘未来5年乃至15年中国发展的蓝图，明确"十四五"时期经济社会发展目标和2035年远景目标。',
+    plainExplanation: '描绘未来5年乃至15年中国发展的蓝图，明确"十四五"目标和2035年远景目标。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2020' },
       { title: '中共中央关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议', publisher: '人民出版社', year: '2020' },
@@ -603,11 +727,18 @@ export const plenaries: Plenary[] = [
       '决定召开党的二十大',
     ],
     documents: [
-      { title: '关于党的百年奋斗重大成就和历史经验的决议', type: '决议', summary: '全面总结党的百年奋斗重大成就和历史经验，是党的历史上第三个历史决议。' },
+      {
+        title: '关于党的百年奋斗重大成就和历史经验的决议',
+        type: '决议',
+        summary: '全面总结党的百年奋斗重大成就和历史经验，是党的历史上第三个历史决议。',
+        plainExplanation: '党的第三个历史决议：全面总结百年奋斗重大成就和历史经验，是迈向新征程的纲领性文件。',
+        keyPoints: ['党的第三个历史决议', '总结百年奋斗成就', '总结十条历史经验'],
+      },
     ],
     communique: '通过《关于党的百年奋斗重大成就和历史经验的决议》，决定党的二十大于2022年下半年召开。',
     personnel: {},
     significance: '通过党的历史上第三个历史决议，全面总结党的百年奋斗重大成就和历史经验，对统一全党思想、坚定信心、开创未来具有重大意义。',
+    plainExplanation: '通过党的第三个历史决议，全面总结百年奋斗成就和经验，统一全党思想开创未来。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2021' },
       { title: '中共中央关于党的百年奋斗重大成就和历史经验的决议', publisher: '人民出版社', year: '2021' },
@@ -641,6 +772,7 @@ export const plenaries: Plenary[] = [
       notes: '习近平任中央委员会总书记、中央军事委员会主席。',
     },
     significance: '选举产生以习近平同志为核心的新一届中央领导集体，为新时代新征程党和国家事业发展提供坚强领导保证。',
+    plainExplanation: '二十大后选举习近平任总书记，形成新一届中央领导集体，为新征程提供坚强领导保证。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2022' },
       { title: '新华社', publisher: '新华社', year: '2022' },
@@ -661,11 +793,18 @@ export const plenaries: Plenary[] = [
       '审议通过拟向十四届全国人大一次会议推荐的国家机构领导人员人选建议名单',
     ],
     documents: [
-      { title: '党和国家机构改革方案', type: '决定', summary: '对深化党和国家机构改革作出部署，加强党中央对重大工作的集中统一领导。' },
+      {
+        title: '党和国家机构改革方案',
+        type: '决定',
+        summary: '对深化党和国家机构改革作出部署，加强党中央对重大工作的集中统一领导。',
+        plainExplanation: '对党和国家机构进行新一轮改革，加强党中央对重大工作的集中统一领导。',
+        keyPoints: ['深化机构改革', '加强党中央集中统一领导', '推荐国家机构领导人员人选'],
+      },
     ],
     communique: '通过《党和国家机构改革方案》，审议通过向十四届全国人大和全国政协推荐的人选建议名单。',
     personnel: {},
     significance: '通过《党和国家机构改革方案》，对深化党和国家机构改革作出部署，为新时代新征程党和国家事业发展提供体制机制保障。',
+    plainExplanation: '通过《党和国家机构改革方案》，深化机构改革，为新征程提供体制机制保障。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2023' },
       { title: '新华社', publisher: '新华社', year: '2023' },
@@ -687,11 +826,18 @@ export const plenaries: Plenary[] = [
       '部署推进中国式现代化的重大举措',
     ],
     documents: [
-      { title: '关于进一步全面深化改革、推进中国式现代化的决定', type: '决定', summary: '阐明进一步全面深化改革的指导思想、总目标和重大原则，对进一步全面深化改革、推进中国式现代化作出系统部署，是新时代新征程上推动全面深化改革向广度和深度挺进的总动员、总部署。' },
+      {
+        title: '关于进一步全面深化改革、推进中国式现代化的决定',
+        type: '决定',
+        summary: '阐明进一步全面深化改革的指导思想、总目标和重大原则，对进一步全面深化改革、推进中国式现代化作出系统部署，是新时代新征程上推动全面深化改革向广度和深度挺进的总动员、总部署。',
+        plainExplanation: '进一步全面深化改革的总动员、总部署，是十八届三中全会的"实践续篇"和推进中国式现代化的"时代新篇"。',
+        keyPoints: ['进一步全面深化改革', '推进中国式现代化', '300多项重要改革举措'],
+      },
     ],
     communique: '通过《关于进一步全面深化改革、推进中国式现代化的决定》，对进一步全面深化改革、推进中国式现代化作出系统部署。',
     personnel: {},
     significance: '是在以中国式现代化全面推进强国建设、民族复兴伟业的关键时期举行的一次十分重要的会议，是新时代新征程上推动全面深化改革向广度和深度挺进的总动员、总部署，是党的十八届三中全会以来全面深化改革的实践续篇，也是新征程推进中国式现代化的时代新篇。',
+    plainExplanation: '关键时期召开的重要会议，是十八届三中全会以来的"实践续篇"和推进中国式现代化的"时代新篇"。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2024' },
       { title: '新华社', publisher: '新华社', year: '2024' },
@@ -714,11 +860,18 @@ export const plenaries: Plenary[] = [
       '分析研究当前经济形势，部署下一步经济工作',
     ],
     documents: [
-      { title: '中共中央关于制定国民经济和社会发展第十五个五年规划的建议', type: '意见', summary: '提出"十五五"时期经济社会发展的指导思想、主要目标、战略任务和重大举措，为未来五年发展擘画蓝图。' },
+      {
+        title: '中共中央关于制定国民经济和社会发展第十五个五年规划的建议',
+        type: '意见',
+        summary: '提出"十五五"时期经济社会发展的指导思想、主要目标、战略任务和重大举措，为未来五年发展擘画蓝图。',
+        plainExplanation: '为"十五五"时期（2026—2030年）经济社会发展擘画蓝图，明确指导思想、主要目标和战略任务。',
+        keyPoints: ['擘画"十五五"蓝图', '明确主要目标和战略任务', '部署重大举措'],
+      },
     ],
     communique: '审议通过《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》，对"十五五"时期经济社会发展作出系统谋划和战略部署。',
     personnel: {},
     significance: '是在"十四五"规划即将圆满收官、"十五五"规划即将开局的关键时期召开的一次重要会议，对科学谋划"十五五"时期经济社会发展、推动中国式现代化建设具有重大而深远的意义。',
+    plainExplanation: '"十四五"收官、"十五五"开局关键时期召开的重要会议，科学谋划未来五年发展。',
     sources: [
       { title: '人民日报', publisher: '人民日报社', year: '2025' },
       { title: '新华社', publisher: '新华社', year: '2025' },

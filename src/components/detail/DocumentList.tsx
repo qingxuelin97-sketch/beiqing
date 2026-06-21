@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { ScrollText, FileSignature } from 'lucide-react';
+import { ScrollText, FileSignature, Sparkles, Lightbulb } from 'lucide-react';
 import type { PartyDocument } from '@/data/types';
+import { cn } from '@/lib/utils';
 
 const typeColor: Record<string, string> = {
   '纲领': 'bg-party-red/15 text-party-red border-party-red/30',
@@ -61,7 +62,7 @@ export function DocumentList({ documents, agenda }: DocumentListProps) {
       {documents.length === 0 ? (
         <p className="text-sm text-party-ink-soft/60 italic">本次会议未通过正式文件，详见公报内容。</p>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-4">
           {documents.map((doc, idx) => (
             <motion.div
               key={idx}
@@ -71,15 +72,46 @@ export function DocumentList({ documents, agenda }: DocumentListProps) {
               transition={{ delay: idx * 0.1 }}
               className="group relative bg-white/40 border border-party-gold/30 rounded p-4 hover:border-party-gold/60 hover:shadow-md transition-all"
             >
+              {/* 文件标题与类型 */}
               <div className="flex items-start justify-between gap-3 mb-2">
                 <h4 className="font-serif font-bold text-base text-party-red-dark leading-snug">
                   《{doc.title}》
                 </h4>
-                <span className={`shrink-0 text-xs px-2 py-0.5 rounded border ${typeColor[doc.type] || typeColor['报告']}`}>
+                <span className={cn('shrink-0 text-xs px-2 py-0.5 rounded border', typeColor[doc.type] || typeColor['报告'])}>
                   {doc.type}
                 </span>
               </div>
-              <p className="text-sm text-party-ink-soft leading-relaxed">{doc.summary}</p>
+
+              {/* 文件摘要 */}
+              <p className="text-sm text-party-ink-soft leading-relaxed mb-3">{doc.summary}</p>
+
+              {/* 通俗解读 */}
+              {doc.plainExplanation && (
+                <div className="bg-gradient-to-br from-party-red/5 to-party-gold/8 border border-party-gold/25 rounded p-3 mb-3">
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <Sparkles size={13} className="text-party-gold-deep" />
+                    <span className="text-xs font-bold text-party-gold-deep tracking-wider">通俗解读</span>
+                  </div>
+                  <p className="text-sm text-party-ink leading-relaxed font-serif">
+                    {doc.plainExplanation}
+                  </p>
+                </div>
+              )}
+
+              {/* 核心要点 */}
+              {doc.keyPoints && doc.keyPoints.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {doc.keyPoints.map((pt, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 bg-party-red/8 text-party-red-dark border border-party-red/15 rounded-full"
+                    >
+                      <Lightbulb size={9} className="text-party-gold-deep" />
+                      {pt}
+                    </span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

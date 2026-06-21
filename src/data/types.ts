@@ -6,6 +6,10 @@ export interface PartyDocument {
   title: string;
   type: DocumentType;
   summary: string;
+  /** 通俗解读：用简短通俗的语言解释该文件的核心内容与意义 */
+  plainExplanation: string;
+  /** 文件核心要点 */
+  keyPoints?: string[];
 }
 
 export interface Personnel {
@@ -37,6 +41,8 @@ export interface Congress {
   documents: PartyDocument[];
   personnel: Personnel;
   significance: string;
+  /** 通俗解读：用简短通俗的语言说明本次会议的核心意义 */
+  plainExplanation: string;
   sources: Source[];
 }
 
@@ -54,6 +60,8 @@ export interface Plenary {
   communique: string;
   personnel: Personnel;
   significance: string;
+  /** 通俗解读：用简短通俗的语言说明本次会议的核心意义 */
+  plainExplanation: string;
   sources: Source[];
 }
 
@@ -64,4 +72,15 @@ export interface TimelineItem {
   title: string;
   subtitle: string;
   refId: string;
+}
+
+/** 文件浏览页用的扁平化文件结构 */
+export interface DocumentWithMeta extends PartyDocument {
+  docId: string;
+  meetingId: string;
+  meetingName: string;
+  meetingShortName: string;
+  meetingType: 'congress' | 'plenary';
+  date: string;
+  congressOrdinal: number;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Search, Home, Calendar, FileText, BookOpen, Info } from 'lucide-react';
+import { Menu, X, Search, Home, Calendar, FileText, BookOpen, Info, Library } from 'lucide-react';
 import { PartyEmblem } from '@/components/ui/PartyEmblem';
 import { cn } from '@/lib/utils';
 
@@ -9,6 +9,7 @@ const navItems = [
   { to: '/', label: '首页', icon: Home },
   { to: '/congresses', label: '代表大会', icon: BookOpen },
   { to: '/plenaries', label: '中央全会', icon: FileText },
+  { to: '/documents', label: '文件总览', icon: Library },
   { to: '/timeline', label: '历史时间轴', icon: Calendar },
   { to: '/search', label: '检索', icon: Search },
   { to: '/about', label: '关于', icon: Info },

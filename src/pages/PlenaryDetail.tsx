@@ -6,6 +6,7 @@ import { InfoCard } from '@/components/detail/InfoCard';
 import { DocumentList } from '@/components/detail/DocumentList';
 import { PersonnelCard } from '@/components/detail/PersonnelCard';
 import { SourceList } from '@/components/detail/SourceList';
+import { PlainExplanationCard } from '@/components/detail/PlainExplanationCard';
 import { StarDivider } from '@/components/ui/StarDivider';
 import { PartyStar } from '@/components/ui/PartyEmblem';
 
@@ -59,6 +60,13 @@ export default function PlenaryDetail() {
       </motion.div>
 
       <StarDivider />
+
+      {/* 一句话读懂本次全会 */}
+      {plenary.plainExplanation && (
+        <div className="mb-6">
+          <PlainExplanationCard text={plenary.plainExplanation} label="一句话读懂本次全会" />
+        </div>
+      )}
 
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 space-y-6">

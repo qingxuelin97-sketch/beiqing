@@ -6,6 +6,7 @@ import { InfoCard } from '@/components/detail/InfoCard';
 import { DocumentList } from '@/components/detail/DocumentList';
 import { PersonnelCard } from '@/components/detail/PersonnelCard';
 import { SourceList } from '@/components/detail/SourceList';
+import { PlainExplanationCard } from '@/components/detail/PlainExplanationCard';
 import { StarDivider } from '@/components/ui/StarDivider';
 import { PartyStar } from '@/components/ui/PartyEmblem';
 import { PlenaryCard } from '@/components/plenary/PlenaryCard';
@@ -62,6 +63,13 @@ export default function CongressDetail() {
       </motion.div>
 
       <StarDivider />
+
+      {/* 一句话读懂本次大会 */}
+      {congress.plainExplanation && (
+        <div className="mb-6">
+          <PlainExplanationCard text={congress.plainExplanation} label="一句话读懂本次大会" />
+        </div>
+      )}
 
       {/* 内容区 */}
       <div className="grid lg:grid-cols-3 gap-6">
